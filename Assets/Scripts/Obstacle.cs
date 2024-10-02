@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
-    private GameObject Player;
+    
+
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player"); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +23,11 @@ public class Obstacle : MonoBehaviour
         }
         else if (collision.tag == "Player")
         {
-            Destroy(Player.gameObject);
+            //Destroy(player.gameObject);
+
+            player.SetActive(false);
+            //Player playerScript = new Player();
+            //playerScript.playerDied();
         }
     }
 

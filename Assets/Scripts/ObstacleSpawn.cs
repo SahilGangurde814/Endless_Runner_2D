@@ -11,10 +11,11 @@ public class ObstacleSpawn : MonoBehaviour
     public float maxY;
     public float timebetweenSpawn;
     private float SpawnTime;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
